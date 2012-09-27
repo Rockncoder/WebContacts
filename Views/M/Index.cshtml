@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebContacts.Models.Contact>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MLayout.cshtml";
+}
+
+<section data-role="page" id="index" data-theme="c">
+    <header data-role="header" data-position="fixed">
+        <h2>Index</h2>
+        @Html.ActionLink("Create New", "Create")
+    </header>
+    <ul data-role="listview">
+        @foreach (var item in Model)
+        {
+            <li>
+                <div>
+                @Html.DisplayFor(modelItem => item.FirstName)
+                @Html.DisplayFor(modelItem => item.LastName)
+                </div>
+                <div>
+                @Html.DisplayFor(modelItem => item.Telephone)
+                </div>
+                <div>
+                @Html.DisplayFor(modelItem => item.Email)
+                </div>
+                <div>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) 
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) 
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </div>
+            </li>
+        }
+    </ul>
+</section>
+

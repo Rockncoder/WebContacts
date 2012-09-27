@@ -1,0 +1,1 @@
+﻿This is the source code to the jQuery Mobile Quick Start Webcast. Nothing super difficult, just a demonstration of how easy it is to convert a regular MVC site into a jQuery Mobile Web Site.
